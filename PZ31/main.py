@@ -1,3 +1,5 @@
+# Даны 2 целых числа: A, B. Проверить истиность высказывания:
+# "Каждое из чисел A и B нечётное."
 from colorama import Fore
 
 try:
@@ -10,4 +12,4 @@ try:
         print("Нечётные не оба числа")
 
 except ValueError:
-    print(Fore.RED + "Введите число")
+    print(Fore.RED + "Введите число") 
