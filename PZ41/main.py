@@ -10,9 +10,12 @@ while True:
     try:
         a, b = map(int, input(Fore.WHITE + "Введите числа через пробел, пример (1 2) >> ").split())
         if a > b:
-            print(Fore.RED + "Первое число должно быть меньше второго")
+            print(Fore.RED + "Error: Первое число должно быть меньше второго")
         else:
             print(Fore.GREEN + f"Сумма квадратов чисел последовательности >> {sum_squares(a, b)}")
 
     except ValueError:
-        print(Fore.RED + "Введите правильные значения")
+        print(Fore.RED + "Error: Введите правильные значения")
+
+    except Exception as ex:
+        print(Fore.RED + f"Error: {ex}")
