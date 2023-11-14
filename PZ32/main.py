@@ -20,5 +20,5 @@ while True:
             length_m = length / 100
 
         print(Fore.GREEN + f"Длина отрезка в метрах: {length_m}")
-    except:
+    except ValueError:
         print(Fore.RED + "Введите число")
