@@ -2,12 +2,12 @@
 # Дан номер единицы длины (целое число в диапазоне 1-5) и длина отрезка в этих единицах (вещественное число). 
 # Найти длину отрезка в метрах.
 from colorama import Fore
-
+                    
 while True:
     try:
         unit = int(input("Введите номер единицы длины (1-5): "))
         length = float(input("Введите длину отрезка в выбранных единицах: "))
-
+                        
         if unit == 1:
             length_m = length / 10
         elif unit == 2:
@@ -18,7 +18,10 @@ while True:
             length_m = length / 1000
         elif unit == 5:
             length_m = length / 100
-
+        else:
+            print("Вы ввели неправильное значение")
+            break
+                                      
         print(Fore.GREEN + f"Длина отрезка в метрах: {length_m}")
     except ValueError:
         print(Fore.RED + "Введите число")
